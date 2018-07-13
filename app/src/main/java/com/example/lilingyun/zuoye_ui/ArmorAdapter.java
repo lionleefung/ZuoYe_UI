@@ -1,5 +1,6 @@
 package com.example.lilingyun.zuoye_ui;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
@@ -7,113 +8,84 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
 
-public class ArmorAdapter extends RecyclerView.Adapter<ArmorAdapter.ViewHolder> {
+public class ArmorAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
-    private List<ArmorItem> mArmorList;
+    private List<ArmorContent> mArmorContentList;
+    public static final int ITEM_TYPE_Title=0;
+    public static final int ITEM_TYPE_CONTENT=1;
 
-    static class ViewHolder extends RecyclerView.ViewHolder{
-        View armorView;
-        TextView armorName;
-        Button bt1;
-        Button bt2;
-        Button bt3;
-        Button bt4;
-        Button bt5;
-        public ViewHolder(View view){
-            super(view);
-            armorView=view;
-            armorName = (TextView)view.findViewById(R.id.armorname);
-            bt1=(Button)view.findViewById(R.id.btn1);
-            bt2=(Button)view.findViewById(R.id.btn2);
-            bt3=(Button)view.findViewById(R.id.btn3);
-            bt4=(Button)view.findViewById(R.id.btn4);
-            bt5=(Button)view.findViewById(R.id.btn5);
+    public ArmorAdapter(List<ArmorContent> mArmorContentLis){
+      this.mArmorContentList=mArmorContentLis;
+    }
+    @Override
+    public int getItemViewType(int position){
+        if( mArmorContentList.get(position).getType()==0){
+            //TitleView
+            return ITEM_TYPE_Title;
+        } else if(mArmorContentList.get(position).getType()==1){
+            //ContentView
+            return ITEM_TYPE_CONTENT;
+        }
+        else return 2;
+    }
+    //内容 ViewHolder
+    public static class TitleViewHolder extends RecyclerView.ViewHolder {
+        private TextView textView;
+
+        public TitleViewHolder(View itemView) {
+            super(itemView);
+            textView = itemView.findViewById(R.id.title);
+        }
+    }
+    public static class ContentViewHolder extends RecyclerView.ViewHolder{
+        private ImageView leftImage;
+        private TextView name;
+        private ImageView rightImage;
+        public ContentViewHolder(View itemView){
+            super(itemView);
+            leftImage = itemView.findViewById(R.id.content_lcon);
+            name = itemView.findViewById(R.id.content_name);
+            rightImage = itemView.findViewById(R.id.content_rcon);
+
         }
     }
 
-    public ArmorAdapter(List<ArmorItem> armorList){
-        mArmorList = armorList;
+    @Override
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View view;
+        if (viewType == ITEM_TYPE_Title) {
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_title, parent, false);
+            return new TitleViewHolder(view);
+        } else if (viewType == ITEM_TYPE_CONTENT) {
+            view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_content, parent, false);
+            return new ContentViewHolder(view);
+        }
+        else return null;
     }
     @Override
-    public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType){
-        View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.armorset_item,parent,false);
-        final ViewHolder holder=new ViewHolder(view);
-        /*
-        holder.armorName.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                int position=holder.getAdapterPosition();
-                ArmorItem armor=mArmorList.get(position);
-                Toast.makeText(v.getContext(),"点击了导航栏"+armor.getName(),Toast.LENGTH_SHORT).show();
-            }
-        });
-        */
-        holder.bt1.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                int position=holder.getAdapterPosition();
-                ArmorItem armor=mArmorList.get(position);
-                Toast.makeText(v.getContext(), "点击了按钮"+armor.getImageID1()[0], Toast.LENGTH_SHORT).show();
-            }
-        });
-        holder.bt2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                int position=holder.getAdapterPosition();
-                ArmorItem armor=mArmorList.get(position);
-                Toast.makeText(v.getContext(), "点击了按钮"+armor.getImageID1()[1], Toast.LENGTH_SHORT).show();
-            }
-        });
-        holder.bt3.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                int position=holder.getAdapterPosition();
-                ArmorItem armor=mArmorList.get(position);
-                Toast.makeText(v.getContext(), "点击了按钮"+armor.getImageID1()[2], Toast.LENGTH_SHORT).show();
-            }
-        });
-        holder.bt4.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                int position=holder.getAdapterPosition();
-                ArmorItem armor=mArmorList.get(position);
-                Toast.makeText(v.getContext(), "点击了按钮"+armor.getImageID1()[3], Toast.LENGTH_SHORT).show();
-            }
-        });
-        holder.bt5.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v){
-                int position=holder.getAdapterPosition();
-                ArmorItem armor=mArmorList.get(position);
-                Toast.makeText(v.getContext(), "点击了按钮"+armor.getImageID1()[4], Toast.LENGTH_SHORT).show();
-            }
-        });
-        return holder;
-    }
-    @Override
-    public void onBindViewHolder(ViewHolder holder,int position){
-        ArmorItem armor=mArmorList.get(position);
-        holder.armorName.setText(armor.getName());
-        //Drawable drawable = getResources().getDrawable(armor.getImageID1()[0]);// 找到资源图片
-        //drawable.setBounds(0, 0, drawable.getMinimumWidth(), drawable.getMinimumHeight());// 设置图片宽高
-        //holder.bt1.setCompoundDrawables(drawable, null, null, null);// 设置到控件中
+    //将数据与界面绑定
+    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+        if (holder instanceof TitleViewHolder) {
+            ((TitleViewHolder) holder).textView.setText(mArmorContentList.get(position).getName());
+        } else if (holder instanceof ContentViewHolder) {
+            ((ContentViewHolder) holder).leftImage.setImageResource(mArmorContentList.get(position).getLeftid());
+            ((ContentViewHolder) holder).name.setText(mArmorContentList.get(position).getName());
+            ((ContentViewHolder) holder).rightImage.setImageResource(mArmorContentList.get(position).getRightid());
+        } else {
+        }
 
     }
+
     @Override
     public int getItemCount(){
-        return mArmorList.size();
+        return mArmorContentList.size();
     }
-
-    //@Override
-    //public int getItemViewType(int position) {
-
-   // }
 
 }
 

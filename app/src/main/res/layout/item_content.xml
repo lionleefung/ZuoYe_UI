@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content_item"
     android:layout_width="match_parent"
     android:layout_height="35dp"
     android:orientation="horizontal">
 
     <ImageView
-        android:id="@+id/content_icon"
+        android:id="@+id/content_lcon"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:background="#0f0"/>
@@ -18,6 +19,7 @@
         android:layout_weight="1" />
 
     <ImageView
+        android:id="@+id/content_rcon"
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:background="#00f"
