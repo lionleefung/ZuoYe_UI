@@ -1,17 +1,11 @@
 package com.example.lilingyun.zuoye_ui;
 
-import android.content.Context;
-import android.content.res.Resources;
-import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import java.util.List;
 
 public class ArmorAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
@@ -74,9 +68,9 @@ public class ArmorAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
         if (holder instanceof TitleViewHolder) {
             ((TitleViewHolder) holder).textView.setText(mArmorContentList.get(position).getName());
         } else if (holder instanceof ContentViewHolder) {
-            ((ContentViewHolder) holder).leftImage.setImageResource(mArmorContentList.get(position).getLeftid());
+            ((ContentViewHolder) holder).leftImage.setBackgroundResource(mArmorContentList.get(position).getLeftid());
             ((ContentViewHolder) holder).name.setText(mArmorContentList.get(position).getName());
-            ((ContentViewHolder) holder).rightImage.setImageResource(mArmorContentList.get(position).getRightid());
+            ((ContentViewHolder) holder).rightImage.setBackgroundResource(mArmorContentList.get(position).getRightid());
         } else {
         }
 
