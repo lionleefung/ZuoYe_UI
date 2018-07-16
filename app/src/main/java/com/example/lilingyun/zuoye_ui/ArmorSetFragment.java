@@ -25,29 +25,32 @@ public class ArmorSetFragment extends android.support.v4.app.Fragment {
         return view;
     }
     private void initArmors(){
-        for(int i = 0;i < 1;i++){
-            ArmorContent apple2=new ArmorContent("人海呀",R.mipmap.beehive,R.mipmap.btn_next_pressed,0);
+
+            ArmorContent apple1=new ArmorContent("Adamantie Armor",R.mipmap.beehive,R.mipmap.btn_next_pressed,0);
+            armorContentList.add(apple1);
+            ArmorContent apple2=new ArmorContent("Adamantie Breastplate",R.mipmap.beehive,R.mipmap.btn_next_pressed,1);
             armorContentList.add(apple2);
-        }
-        for(int i = 0;i < 2;i++){
-            ArmorContent apple2=new ArmorContent("茫茫啊",R.mipmap.beehive,R.mipmap.btn_next_pressed,1);
-            armorContentList.add(apple2);
-        }
-        for(int i = 0;i < 1;i++){
-            ArmorContent apple2=new ArmorContent("浮浮沉沉",R.mipmap.beehive,R.mipmap.btn_next_pressed,0);
-            armorContentList.add(apple2);
-        }
-        for(int i = 0;i < 5;i++){
-            ArmorContent apple2=new ArmorContent("总是心门",R.mipmap.beehive,R.mipmap.btn_next_pressed,1);
-            armorContentList.add(apple2);
-        }
-        for(int i = 0;i < 1;i++){
-            ArmorContent apple2=new ArmorContent("浮浮沉沉",R.mipmap.beehive,R.mipmap.btn_next_pressed,0);
-            armorContentList.add(apple2);
-        }
-        for(int i = 0;i < 8;i++){
-            ArmorContent apple2=new ArmorContent("总是心门",R.mipmap.beehive,R.mipmap.btn_next_pressed,1);
-            armorContentList.add(apple2);
-        }
+            ArmorContent apple3=new ArmorContent("Adamantie Leggings",R.mipmap.beehive,R.mipmap.btn_next_pressed,1);
+            armorContentList.add(apple3);
+            ArmorContent apple4=new ArmorContent("Adamantie Headgear",R.mipmap.beehive,R.mipmap.btn_next_pressed,1);
+            armorContentList.add(apple4);
+            ArmorContent apple5=new ArmorContent("Adamantie Helmet",R.mipmap.beehive,R.mipmap.btn_next_pressed,1);
+            armorContentList.add(apple5);
+            ArmorContent apple6=new ArmorContent("Adamantie Mask",R.mipmap.beehive,R.mipmap.btn_next_pressed,1);
+            armorContentList.add(apple6);
+
+        ArmorContent apple11=new ArmorContent("Chlorophyte Armor",R.mipmap.beehive,R.mipmap.btn_next_pressed,0);
+        armorContentList.add(apple11);
+        ArmorContent apple21=new ArmorContent("AChlorophyte Plate Mail",R.mipmap.beehive,R.mipmap.btn_next_pressed,1);
+        armorContentList.add(apple21);
+        ArmorContent apple31=new ArmorContent("AChlorophyte Greaves",R.mipmap.beehive,R.mipmap.btn_next_pressed,1);
+        armorContentList.add(apple31);
+        ArmorContent apple41=new ArmorContent("Chlorophyte Headgear",R.mipmap.beehive,R.mipmap.btn_next_pressed,1);
+        armorContentList.add(apple41);
+        ArmorContent apple51=new ArmorContent("Chlorophyte Helmet",R.mipmap.beehive,R.mipmap.btn_next_pressed,1);
+        armorContentList.add(apple51);
+        ArmorContent apple61=new ArmorContent("Chlorophyte Mask",R.mipmap.beehive,R.mipmap.btn_next_pressed,1);
+        armorContentList.add(apple61);
+
     }
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/linearLayout"
+    android:id="@+id/linearLayout_enemies"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -13,7 +13,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/more_app"
+            android:id="@+id/more_app_enemies"
             android:layout_width="62dp"
             android:layout_height="match_parent"
 
@@ -26,7 +26,7 @@
             android:layout_weight="1" />
 
         <Button
-            android:id="@+id/shouye_search"
+            android:id="@+id/shouye_search_enemies"
             android:layout_width="66dp"
             android:layout_height="match_parent"
             android:background="@drawable/home_btn_search_pressed"
@@ -57,18 +57,19 @@
             android:visibility="invisible" />
 
         <Button
-            android:id="@+id/tools1"
+            android:id="@+id/water1"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Tools"
+            android:text="Water"
             android:textColor="#ffffffff"
             android:background="#50000000"
             android:textAllCaps="false"
             android:textSize="20sp"
-
+            android:drawableLeft="@drawable/water"
             android:paddingLeft="30dp"
-            android:paddingRight="35dp" />
+            android:paddingRight="35dp"
+            android:src="@drawable/water"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -77,17 +78,17 @@
             android:visibility="invisible" />
 
         <Button
-            android:id="@+id/crafting1"
+            android:id="@+id/rain1"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Crafting"
+            android:text="Rain"
             android:textColor="#ffffffff"
             android:background="#50000000"
             android:textAllCaps="false"
-
+            android:drawableLeft="@drawable/rain"
             android:paddingLeft="30dp"
-            android:paddingRight="29dp"
+            android:paddingRight="50dp"
             android:textSize="20sp" />
 
         <TextView
@@ -120,17 +121,17 @@
             android:visibility="invisible"/>
 
         <Button
-            android:id="@+id/weapon1"
+            android:id="@+id/jungle1"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
             android:background="#50000000"
-            android:text="Weapon"
+            android:text="Jungle"
             android:textColor="#ffffffff"
             android:textAllCaps="false"
-
+            android:drawableLeft="@mipmap/jungle"
             android:paddingLeft="30dp"
-            android:paddingRight="20dp"
+            android:paddingRight="32dp"
             android:textSize="20sp" />
         <TextView
             android:layout_width="wrap_content"
@@ -139,17 +140,17 @@
             android:visibility="invisible"/>
 
         <Button
-            android:id="@+id/accessory1"
+            android:id="@+id/desert1"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Accessory"
+            android:text="Desert"
             android:textColor="#ffffffff"
             android:background="#50000000"
             android:textAllCaps="false"
-
+            android:drawableLeft="@mipmap/desert"
             android:paddingLeft="30dp"
-            android:paddingRight="3dp"
+            android:paddingRight="35dp"
             android:textSize="20sp"/>
         <TextView
             android:layout_width="wrap_content"
@@ -181,17 +182,17 @@
             android:visibility="invisible"/>
 
         <Button
-            android:id="@+id/ammunition1"
+            android:id="@+id/beehive1"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Amunition"
+            android:text="Beehive"
             android:textColor="#ffffffff"
             android:background="#50000000"
             android:textAllCaps="false"
-
+            android:drawableLeft="@mipmap/beehive"
             android:paddingLeft="30dp"
-            android:paddingRight="-10dp"
+            android:paddingRight="20dp"
             android:textSize="20sp"/>
         <TextView
             android:layout_width="wrap_content"
@@ -200,15 +201,15 @@
             android:visibility="invisible"/>
 
         <Button
-            android:id="@+id/furniture1"
+            android:id="@+id/dungeon1"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Furniture"
+            android:text="Dungeon"
             android:textColor="#ffffffff"
             android:background="#50000000"
             android:textAllCaps="false"
-
+            android:drawableLeft="@drawable/dungeon"
             android:paddingLeft="30dp"
             android:paddingRight="20dp"
             android:textSize="20sp"/>
@@ -242,15 +243,15 @@
             android:visibility="invisible"/>
 
         <Button
-            android:id="@+id/tools2"
+            android:id="@+id/water2"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Tools"
+            android:text="Water"
             android:textColor="#ffffffff"
             android:background="#50000000"
             android:textAllCaps="false"
-
+            android:drawableLeft="@drawable/water"
             android:paddingLeft="30dp"
             android:paddingRight="35dp"
             android:textSize="20sp"/>
@@ -261,16 +262,16 @@
             android:visibility="invisible"/>
 
         <Button
-            android:id="@+id/crafting2"
+            android:id="@+id/rain2"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Crafting"
+            android:text="Rain"
             android:textColor="#ffffffff"
             android:background="#50000000"
-
+            android:drawableLeft="@drawable/rain"
             android:paddingLeft="30dp"
-            android:paddingRight="28dp"
+            android:paddingRight="50dp"
             android:textAllCaps="false"
 
             android:textSize="20sp"/>
@@ -304,15 +305,76 @@
             android:visibility="invisible"/>
 
         <Button
-            android:id="@+id/weapon2"
+            android:id="@+id/jungle2"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Weapon"
+            android:text="Jungle"
             android:textColor="#ffffffff"
             android:background="#50000000"
             android:textAllCaps="false"
+            android:drawableLeft="@mipmap/jungle"
+            android:paddingLeft="30dp"
+            android:paddingRight="32dp"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11"
+            android:visibility="invisible"/>
 
+        <Button
+            android:id="@+id/desert2"
+            android:layout_width="140sp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:text="Desert"
+            android:textColor="#ffffffff"
+            android:background="#50000000"
+            android:textAllCaps="false"
+            android:drawableLeft="@mipmap/desert"
+            android:paddingLeft="30dp"
+            android:paddingRight="32dp"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11"
+            android:textSize="18sp"
+            android:visibility="invisible"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11"
+            android:textSize="12sp"
+            android:visibility="invisible"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11"
+            android:textSize="18sp"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/beehive2"
+            android:layout_width="140sp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:text="Beehive"
+            android:textColor="#ffffffff"
+            android:background="#50000000"
+            android:textAllCaps="false"
+            android:drawableLeft="@mipmap/beehive"
             android:paddingLeft="30dp"
             android:paddingRight="20dp"
             android:textSize="20sp"/>
@@ -323,77 +385,16 @@
             android:visibility="invisible"/>
 
         <Button
-            android:id="@+id/accessory2"
+            android:id="@+id/dungeon2"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Accessory"
+            android:text="Dungeon"
             android:textColor="#ffffffff"
             android:background="#50000000"
             android:textAllCaps="false"
-
-            android:paddingLeft="30dp"
-            android:paddingRight="2dp"
-            android:textSize="20sp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="11"
-            android:textSize="18sp"
-            android:visibility="invisible"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="11"
-            android:textSize="12sp"
-            android:visibility="invisible"/>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="11"
-            android:textSize="18sp"
-            android:visibility="invisible"/>
-
-        <Button
-            android:id="@+id/ammunition2"
-            android:layout_width="140sp"
-            android:layout_height="55dp"
-            android:layout_weight="1"
-            android:text="Amunition"
-            android:textColor="#ffffffff"
-            android:background="#50000000"
-            android:textAllCaps="false"
-
-            android:paddingLeft="30dp"
-            android:paddingRight="-10dp"
-            android:textSize="20sp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="11"
-            android:visibility="invisible"/>
-
-        <Button
-            android:id="@+id/furniture2"
-            android:layout_width="140sp"
-            android:layout_height="55dp"
-            android:layout_weight="1"
-            android:text="Furniture"
-            android:textColor="#ffffffff"
-            android:background="#50000000"
-            android:textAllCaps="false"
-
-            android:paddingRight="21dp"
+            android:drawableLeft="@drawable/dungeon"
+            android:paddingRight="20dp"
             android:paddingLeft="30dp"
             android:textSize="20sp"/>
         <TextView

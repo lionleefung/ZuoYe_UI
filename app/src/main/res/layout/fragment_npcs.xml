@@ -32,16 +32,18 @@
             android:background="@drawable/home_btn_search_pressed"
             android:text="" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="11"
             android:textSize="60sp"
-            android:visibility="invisible"/>
+            android:visibility="invisible" />
     </LinearLayout>
 
     <LinearLayout
@@ -57,11 +59,11 @@
             android:visibility="invisible" />
 
         <Button
-            android:id="@+id/tools1"
+            android:id="@+id/arms"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Tools"
+            android:text="Arms Dealer"
             android:textColor="#ffffffff"
             android:background="#50000000"
             android:textAllCaps="false"
@@ -77,16 +79,16 @@
             android:visibility="invisible" />
 
         <Button
-            android:id="@+id/crafting1"
+            android:id="@+id/angler"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Crafting"
+            android:text="Angler"
             android:textColor="#ffffffff"
             android:background="#50000000"
             android:textAllCaps="false"
 
-            android:paddingLeft="30dp"
+            android:paddingLeft="0dp"
             android:paddingRight="29dp"
             android:textSize="20sp" />
 
@@ -120,17 +122,17 @@
             android:visibility="invisible"/>
 
         <Button
-            android:id="@+id/weapon1"
+            android:id="@+id/clothier"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
             android:background="#50000000"
-            android:text="Weapon"
+            android:text="Clothier"
             android:textColor="#ffffffff"
             android:textAllCaps="false"
 
-            android:paddingLeft="30dp"
-            android:paddingRight="20dp"
+            android:paddingLeft="-40dp"
+            android:paddingRight="0dp"
             android:textSize="20sp" />
         <TextView
             android:layout_width="wrap_content"
@@ -139,16 +141,16 @@
             android:visibility="invisible"/>
 
         <Button
-            android:id="@+id/accessory1"
+            android:id="@+id/cyborg"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Accessory"
+            android:text="Cyborg"
             android:textColor="#ffffffff"
             android:background="#50000000"
             android:textAllCaps="false"
 
-            android:paddingLeft="30dp"
+            android:paddingLeft="-25dp"
             android:paddingRight="3dp"
             android:textSize="20sp"/>
         <TextView
@@ -190,7 +192,7 @@
             android:background="#50000000"
             android:textAllCaps="false"
 
-            android:paddingLeft="30dp"
+            android:paddingLeft="-30dp"
             android:paddingRight="-10dp"
             android:textSize="20sp"/>
         <TextView
@@ -209,7 +211,7 @@
             android:background="#50000000"
             android:textAllCaps="false"
 
-            android:paddingLeft="30dp"
+            android:paddingLeft="10dp"
             android:paddingRight="20dp"
             android:textSize="20sp"/>
         <TextView
@@ -242,16 +244,16 @@
             android:visibility="invisible"/>
 
         <Button
-            android:id="@+id/tools2"
+            android:id="@+id/dye"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Tools"
+            android:text="Dye trader"
             android:textColor="#ffffffff"
             android:background="#50000000"
             android:textAllCaps="false"
 
-            android:paddingLeft="30dp"
+            android:paddingLeft="20dp"
             android:paddingRight="35dp"
             android:textSize="20sp"/>
         <TextView
@@ -261,15 +263,15 @@
             android:visibility="invisible"/>
 
         <Button
-            android:id="@+id/crafting2"
+            android:id="@+id/goblin"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Crafting"
+            android:text="Goblin"
             android:textColor="#ffffffff"
             android:background="#50000000"
 
-            android:paddingLeft="30dp"
+            android:paddingLeft="-5dp"
             android:paddingRight="28dp"
             android:textAllCaps="false"
 
@@ -304,18 +306,18 @@
             android:visibility="invisible"/>
 
         <Button
-            android:id="@+id/weapon2"
+            android:id="@+id/guide"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Weapon"
-            android:textColor="#ffffffff"
             android:background="#50000000"
-            android:textAllCaps="false"
-
-            android:paddingLeft="30dp"
+            android:paddingLeft="-32dp"
             android:paddingRight="20dp"
-            android:textSize="20sp"/>
+            android:text="Guide"
+
+            android:textAllCaps="false"
+            android:textColor="#ffffffff"
+            android:textSize="20sp" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -323,16 +325,16 @@
             android:visibility="invisible"/>
 
         <Button
-            android:id="@+id/accessory2"
+            android:id="@+id/mechanic"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Accessory"
+            android:text="Mechanic"
             android:textColor="#ffffffff"
             android:background="#50000000"
             android:textAllCaps="false"
 
-            android:paddingLeft="30dp"
+            android:paddingLeft="0dp"
             android:paddingRight="2dp"
             android:textSize="20sp"/>
         <TextView
@@ -365,16 +367,16 @@
             android:visibility="invisible"/>
 
         <Button
-            android:id="@+id/ammunition2"
+            android:id="@+id/merchant"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Amunition"
+            android:text="Merchant"
             android:textColor="#ffffffff"
             android:background="#50000000"
             android:textAllCaps="false"
 
-            android:paddingLeft="30dp"
+            android:paddingLeft="-30dp"
             android:paddingRight="-10dp"
             android:textSize="20sp"/>
         <TextView
@@ -384,16 +386,16 @@
             android:visibility="invisible"/>
 
         <Button
-            android:id="@+id/furniture2"
+            android:id="@+id/nurse"
             android:layout_width="140sp"
             android:layout_height="55dp"
             android:layout_weight="1"
-            android:text="Furniture"
+            android:text="Nurse"
             android:textColor="#ffffffff"
             android:background="#50000000"
             android:textAllCaps="false"
 
-            android:paddingRight="21dp"
+            android:paddingRight="60dp"
             android:paddingLeft="30dp"
             android:textSize="20sp"/>
         <TextView
@@ -403,5 +405,68 @@
             android:textSize="18sp"
             android:visibility="invisible"/>
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11"
+            android:textSize="12sp"
+            android:visibility="invisible"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11"
+            android:textSize="18sp"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/old2"
+            android:layout_width="140sp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:text="Old man"
+            android:textColor="#ffffffff"
+            android:background="#50000000"
+            android:textAllCaps="false"
+
+            android:paddingLeft="-35dp"
+            android:paddingRight="-10dp"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/painter"
+            android:layout_width="140sp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:text="Painter"
+            android:textColor="#ffffffff"
+            android:background="#50000000"
+            android:textAllCaps="false"
+
+            android:paddingRight="50dp"
+            android:paddingLeft="30dp"
+            android:textSize="20sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="11"
+            android:textSize="18sp"
+            android:visibility="invisible"/>
+    </LinearLayout>
+
 
 </LinearLayout>
